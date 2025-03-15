@@ -37,7 +37,7 @@ export default function PuzzleGame({ params }: { params: Promise<{ name: string 
     if (!isClient) return null;
 
     return (
-        <div className="w-full h-full flex flex-col items-center bg-plus-bg">
+        <div className="w-full h-full flex flex-col items-center">
             {isWin ? (
                 <WinScreen winScore={winScore} paintName={resolvedParams.name} />
             ) : (

@@ -1,5 +1,6 @@
 import PlusLogo from "@/components/Puzzle/PlusLogo";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function WinScreen({winScore, paintName}: {winScore: number, paintName: string}) {
     return (
@@ -25,6 +26,7 @@ export default function WinScreen({winScore, paintName}: {winScore: number, pain
                         </div>
                     </div>
                 </div>
+                {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
                 <a
                     className="bg-plus-button hover:bg-plus-button-hover text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
                     href="/"
