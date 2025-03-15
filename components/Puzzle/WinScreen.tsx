@@ -1,5 +1,5 @@
 import PlusLogo from "@/components/Puzzle/PlusLogo";
-import { redirect } from "next/navigation";
+import Image from "next/image";
 
 export default function WinScreen({winScore, paintName}: {winScore: number, paintName: string}) {
     return (
@@ -8,10 +8,12 @@ export default function WinScreen({winScore, paintName}: {winScore: number, pain
                 <h1 className="text-4xl font-bold mb-6 text-plus-gradient">
                     Победа!
                 </h1>
-                <img
+                <Image
                     src={`/paints/${paintName}/full.png`}
                     alt="Собранная картина"
-                    className="w-64 h-64 object-contain mx-auto mb-6 rounded-lg"
+                    className="object-contain mx-auto mb-6 rounded-lg"
+                    width={200}
+                    height={200}
                 />
                 <div className="bg-gradient-to-r from-[#fd5a54] to-[#7649f1] p-1 rounded-2xl mb-6">
                     <div className="bg-white rounded-xl p-4">
@@ -23,12 +25,12 @@ export default function WinScreen({winScore, paintName}: {winScore: number, pain
                         </div>
                     </div>
                 </div>
-                <button
+                <a
                     className="bg-plus-button hover:bg-plus-button-hover text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
-                    onClick={() => redirect('/')}
+                    href="/"
                 >
                     Перейти в галерею
-                </button>
+                </a>
             </div>
         </div>
     );

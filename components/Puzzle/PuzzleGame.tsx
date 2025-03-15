@@ -32,7 +32,7 @@ export default function PuzzleGame({ params }: { params: Promise<{ name: string 
         if (isWin) {
             addToGallery(resolvedParams.name, winScore);
         }
-    }, [isWin]);
+    }, [addToGallery, isWin, resolvedParams.name, winScore]);
 
     if (!isClient) return null;
 
