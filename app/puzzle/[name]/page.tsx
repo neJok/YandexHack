@@ -44,7 +44,7 @@ export default function PuzzleGame({ params }: { params: Promise<{ name: string 
         if (rotations.every(rotate => rotate % 360 === 0)) {
             const timer = setTimeout(() => {
                 setIsWin(true);
-            }, 1000);
+            }, 300);
 
             return () => clearTimeout(timer);
         }
@@ -64,7 +64,7 @@ export default function PuzzleGame({ params }: { params: Promise<{ name: string 
                             <Image alt="alt" src="/plus_logo.svg" width={30} height={30} />
                             <span className="text-3xl text-white">Вы выиграли {5 + getRandomInt(5)} баллов плюса </span>
                         </div>
-                        <div className="cursor-pointer mt-3" onClick={() => redirect("/")}>Назад к галерее</div>
+                        {/*<div className="cursor-pointer mt-3" onClick={() => redirect("/")}>Назад к галерее</div>*/}
                     </div>
                 </div>
             ) : (
